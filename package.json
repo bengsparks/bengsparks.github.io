@@ -4,7 +4,6 @@
     "description": "",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "semantic-build": "cd semantic && gulp build",
         "start": "http-server -c-1"
     },
     "keywords": [],

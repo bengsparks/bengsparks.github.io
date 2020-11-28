@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "typewriter";
+  src: url("/assets/fonts/rm_typerighter.ttf") format("truetype");
+}
+
+.content {
+  display: block;
+  text-align: center;
+
+  font-size: 1.5em;
+}
+
+nav.info-routes ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+div.contacts ul {
+  list-style-type: none;
+}
+
+
+@media (prefers-color-scheme: dark) {}
