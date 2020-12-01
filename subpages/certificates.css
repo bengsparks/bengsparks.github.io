@@ -38,14 +38,6 @@ body {
   background-color: #E69F00;
 }
 
-.bottom {
-  position: fixed;
-  left: 50%;
-  bottom: 20px;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-}
-
 .content {
   display: block;
   text-align: center;
