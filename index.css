@@ -65,13 +65,9 @@ a[href] {
 }
 
 .bottom-left {
-  text-align: center;
-  bottom: 20px;
 }
 
 .bottom-right {
-  bottom: 20px;
-  margin-left: 100px;
 }
 
 @media (max-width: 600px) {
