@@ -28,10 +28,21 @@
   display: inline;
 }
 
-#info-routes ul a[href],
-#contacts ul a[href] {
+a[href] {
   color: black;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {}
+.bottom-left {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 0.5em;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px; 
+  font-size: 0.5em;
+}

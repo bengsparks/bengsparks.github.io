@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "freemono";
+  src: url("/assets/fonts/FreeMono.woff") format("woff");
+}
+
+body {
+  font-size: 1.5em;
+  font-family: "freemono";
+}
+
+#certificates-title {
+  font-size: 2em;
+}
+
+#certificates {
+  padding-top: 20px;
+  display: inline-grid;
+
+  grid-template-columns: auto 2px 500px
+}
+
+#certificates>div.cert-number {
+  /* color: chocolate; */
+  font-weight: bold;
+  padding-right: 50px;
+}
+
+#certificates>div.cert-number a[href] {
+  color: black;
+}
+
+#certificates>div.cert-class {
+  padding-left: 50px;
+  padding-bottom: 1em;
+}
+
+#certificates>div.cert-separator {
+  background-color: #E69F00;
+}
+
+.bottom {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+.content {
+  display: block;
+  text-align: center;
+}
+
+a[href] {
+  color: black;
+}
+
+.bottom-left {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px; 
+}
