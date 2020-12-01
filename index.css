@@ -8,12 +8,34 @@
   src: url("/assets/fonts/FAIcons.woff")
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 #content {
   display: block;
+  flex: 1 0 auto;
+
+  justify-content: center;
   text-align: center;
 
   font-size: 3em;
   font-family: "freemono";
+}
+
+.center-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #info-routes ul,
@@ -34,30 +56,36 @@ a[href] {
 }
 
 #misc-bottom {
-  font-size: 3em;
-  font-family: "freemono";
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
 
-  display: grid;
+  font-size: 2em;
+  font-family: "freemono";
 }
 
 .bottom-left {
-  position: relative;
-  left: 20px;
+  text-align: center;
   bottom: 20px;
-  font-size: 0.5em;
-
-  margin-top: auto;
-  align-self: flex-end;
 }
 
 .bottom-right {
-  position: relative;
-  right: 20px;
   bottom: 20px;
-  font-size: 0.5em;
-
-  align-self: flex-end;
-
-  margin-top: auto;
   margin-left: 100px;
+}
+
+@media (max-width: 600px) {
+  #misc-bottom {
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+  }
+
+  .bottom-left {
+    margin-top: 1em;
+  }
+
+  .center-me {
+    font-size: 1.5em;
+  }
 }
