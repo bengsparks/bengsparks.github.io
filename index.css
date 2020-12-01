@@ -34,22 +34,30 @@ a[href] {
 }
 
 #misc-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  font-size: 3em;
+  font-family: "freemono";
+
+  display: grid;
 }
 
 .bottom-left {
-  position: absolute;
+  position: relative;
   left: 20px;
   bottom: 20px;
   font-size: 0.5em;
+
+  margin-top: auto;
+  align-self: flex-end;
 }
 
 .bottom-right {
-  position: absolute;
+  position: relative;
+  right: 20px;
   bottom: 20px;
-  right: 20px; 
   font-size: 0.5em;
+
+  align-self: flex-end;
+
+  margin-top: auto;
   margin-left: 100px;
 }
