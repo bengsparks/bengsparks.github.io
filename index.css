@@ -3,11 +3,6 @@
   src: url("/assets/fonts/FreeMono.woff") format("woff");
 }
 
-@font-face {
-  font-family: "font-awesome";
-  src: url("/assets/fonts/FAIcons.woff")
-}
-
 html,
 body {
   margin: 0;
@@ -58,7 +53,7 @@ a[href] {
 #misc-bottom {
   display: flex;
   flex-flow: row nowrap;
-
+  /* width: 100%; */
 
   font-size: 2em;
   font-family: "freemono";
@@ -75,7 +70,8 @@ a[href] {
     margin-bottom: 20px;
   }
 
-  .bottom-left, .bottom-right {
+  .bottom-left,
+  .bottom-right {
     margin-top: 1.5em;
   }
 }

@@ -40,21 +40,65 @@ body {
 
 .content {
   display: block;
-  text-align: center;
+  /* text-align: center; */
+
+  flex: 1 0 auto;
 }
+
+.center-me {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
 
 a[href] {
   color: black;
 }
 
-.bottom-left {
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
+#misc-bottom {
+  display: flex;
+  flex-flow: row nowrap;
+  /* width: 100%; */
+
+  align-items: center;
+  justify-content: center;
+
+  /* font-size: 1.5em; */
+  font-family: "freemono";
 }
 
-.bottom-right {
-  position: absolute;
-  bottom: 20px;
-  right: 20px; 
+@media (min-width: 600px) {
+  #misc-bottom {
+    justify-content: space-between;
+    display: flex;
+    text-align: center;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .bottom-left,
+  .bottom-right {
+    margin-top: 1.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  #misc-bottom {
+    justify-content: space-around;
+    /* font-size: 1.5em; */
+    display: block;
+    text-align: center;
+  }
+
+  .bottom-left {
+    margin-top: 1em;
+  }
+
+  .center-me {
+    /* font-size: 1.5em; */
+  }
 }
