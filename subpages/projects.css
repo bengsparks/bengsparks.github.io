@@ -18,7 +18,7 @@ body {
   text-align: center;
 }
 
-#certificates-title {
+#projects-title {
   padding-top: 5%;
   padding-bottom: 5%;
 }
@@ -33,7 +33,7 @@ a[href] {
     text-align: center;
   }
 
-  #certificates {
+  #projects {
     display: inline-grid;
     grid-template-columns: 250px 3px 450px;
     column-gap: 2%;
@@ -42,30 +42,30 @@ a[href] {
     position: relative;
   }
 
-  #certificates-title {
+  #projects-title {
     padding-top: 50px;
     padding-bottom: 50px;
 
     font-size: 1.5em;
   }
 
-  #certificates .cert-class {
+  #projects .project-name {
     border-top: 1px dashed black;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
-  #certificates .cert-number {
+  #projects .project-link {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  #certificates .cert-class:last-child {
+  #projects .project-name:last-child {
     border-bottom: 1px dashed black;
   }
 
-  #certificates .cert-divider {
+  #projects .cert-divider {
     background-color: chocolate;
   }
 
@@ -87,12 +87,7 @@ a[href] {
     font-size: 2em;
   }
 
-  #certificates {
-    /* padding-left: 15%;
-    padding-right: 15%; */
-  }
-
-  #certificates-title {
+  #projects-title {
     font-size: 1.25em;
     text-align: center;
 
@@ -100,7 +95,7 @@ a[href] {
     padding-bottom: 20px;
   }
 
-  #certificates>div.cert-class {
+  #projects>div.project-name {
     /* border-bottom: 2px solid chocolate; */
     padding-top: 10px;
     padding-bottom: 20px;
