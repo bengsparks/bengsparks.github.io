@@ -3,102 +3,105 @@
   src: url("/assets/fonts/FreeMono.woff") format("woff");
 }
 
+html,
 body {
-  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+
   font-family: "freemono";
 }
 
-#certificates-title {
-  font-size: 2em;
-}
-
-#certificates {
-  padding-top: 20px;
-  display: inline-grid;
-
-  grid-template-columns: auto 2px 500px
-}
-
-#certificates>div.cert-number {
-  /* color: chocolate; */
-  font-weight: bold;
-  padding-right: 50px;
-}
-
-#certificates>div.cert-number a[href] {
-  color: black;
-}
-
-#certificates>div.cert-class {
-  padding-left: 50px;
-  padding-bottom: 1em;
-}
-
-#certificates>div.cert-separator {
-  background-color: #E69F00;
-}
-
 .content {
-  display: block;
-  /* text-align: center; */
-
-  flex: 1 0 auto;
+  font-size: 2em;
+  text-align: center;
 }
 
-.center-me {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  align-items: center;
+#certificates-title {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
-
 
 a[href] {
   color: black;
 }
 
-#misc-bottom {
-  display: flex;
-  flex-flow: row nowrap;
-  /* width: 100%; */
-
-  align-items: center;
-  justify-content: center;
-
-  /* font-size: 1.5em; */
-  font-family: "freemono";
-}
-
 @media (min-width: 600px) {
-  #misc-bottom {
-    justify-content: space-between;
-    display: flex;
-    text-align: center;
-
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+  .content {
+    display: grid;
   }
 
-  .bottom-left,
-  .bottom-right {
-    margin-top: 1.5em;
+  #certificates {
+    display: inline-grid;
+    grid-template-columns: fit-content(290px) 3px fit-content(290px);
+    column-gap: 2%;
+
+    justify-content: center;
+    position: relative;
+  }
+
+  #certificates-title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  #certificates .cert-class {
+    border-top: 1px dashed black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #certificates .cert-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #certificates .cert-class:last-child {
+    border-bottom: 1px dashed black;
+  }
+
+  #certificates .cert-divider {
+    background-color: chocolate;
+  }
+
+  #misc-bottom {
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: 50px;
+    font-size: 1.25em;
   }
 }
 
 @media (max-width: 600px) {
+  .content {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, auto);
+
+    align-self: center;
+    font-size: 2em;
+  }
+
+  #certificates {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #certificates>div.cert-class {
+    /* border-bottom: 2px solid chocolate; */
+    padding-bottom: 5px;
+  }
+
+  #certificates>div.cert-number {
+    padding-top: 5px;
+  }
+
   #misc-bottom {
-    justify-content: space-around;
-    /* font-size: 1.5em; */
-    display: block;
     text-align: center;
-  }
+    position: absolute;
 
-  .bottom-left {
-    margin-top: 1em;
-  }
-
-  .center-me {
-    /* font-size: 1.5em; */
+    bottom: 0;
   }
 }
