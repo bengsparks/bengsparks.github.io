@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "freemono";
+  src: url("/assets/fonts/FreeMono.woff") format("woff");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  font-family: "freemono";
+}
+
+.content {
+  font-size: 2em;
+  text-align: center;
+}
+
+#certificates-title {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+a[href] {
+  color: black;
+}
+
+@media (min-width: 705px) {
+  .content {
+    display: grid;
+    text-align: center;
+  }
+
+  #certificates {
+    display: inline-grid;
+    grid-template-columns: 250px 3px 450px;
+    column-gap: 2%;
+
+    justify-content: center;
+    position: relative;
+  }
+
+  #certificates-title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    font-size: 1.5em;
+  }
+
+  #certificates .cert-class {
+    border-top: 1px dashed black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #certificates .cert-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #certificates .cert-class:last-child {
+    border-bottom: 1px dashed black;
+  }
+
+  #certificates .cert-divider {
+    background-color: chocolate;
+  }
+
+  #misc-bottom {
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: 50px;
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 705px) {
+  .content {
+    display: grid;
+    grid-template-rows: fit-content(250px) 0px fit-content(200px);
+    grid-template-rows: auto;
+
+    font-size: 2em;
+  }
+
+  #certificates {
+    /* padding-left: 15%;
+    padding-right: 15%; */
+  }
+
+  #certificates-title {
+    font-size: 1.25em;
+    text-align: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #certificates>div.cert-class {
+    /* border-bottom: 2px solid chocolate; */
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+    word-wrap: break-word;
+  }
+
+  #misc-bottom {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
